@@ -22,27 +22,27 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     //ниже приведен пример переноса строк "Текстовые блоки" без использования плюсов как при конкатенации в двух последних
     @Query("""
-    SELECT new ru.skypro.workingwithfiles.dto.EmployeeDto(e.id, e.name, e.salary, e.position.position) 
+    SELECT new ru.skypro.workingwithfiles2.dto.EmployeeDto(e.id, e.name, e.salary, e.position.position) 
     FROM Employee e 
     WHERE e.salary = (SELECT MIN(e.salary) FROM Employee e)
     """)
     Page<EmployeeDto> getEmployeeWithMinSalary(Pageable pageable);
 
     @Query("""
-    SELECT new ru.skypro.workingwithfiles.dto.EmployeeDto(e.id, e.name, e.salary, e.position.position)
+    SELECT new ru.skypro.workingwithfiles2.dto.EmployeeDto(e.id, e.name, e.salary, e.position.position)
     FROM Employee e 
     WHERE e.salary = (SELECT MAX(e.salary) FROM Employee e)
     """)
     List<EmployeeDto> getEmployeeWithMaxSalary();
 
-    @Query("SELECT new ru.skypro.workingwithfiles.dto.EmployeeDto(e.id, e.name, e.salary, p.position) " +
+    @Query("SELECT new ru.skypro.workingwithfiles2.dto.EmployeeDto(e.id, e.name, e.salary, p.position) " +
             "FROM Employee e LEFT JOIN FETCH Position p WHERE e.salary > :salary")
     List<EmployeeDto> findEmployeesBySalaryIsGreaterThen(double salary);
 
     List<Employee> findEmployeesByPosition_PositionContainingIgnoreCase(String position);
 
     @Query("""
-    SELECT new ru.skypro.workingwithfiles.dto.ReportDto
+    SELECT new ru.skypro.workingwithfiles2.dto.ReportDto
     (e.position.position, count(e.id), max(e.salary), min(e.salary), avg(e.salary)) FROM Employee e
     GROUP BY e.position.position
     """)

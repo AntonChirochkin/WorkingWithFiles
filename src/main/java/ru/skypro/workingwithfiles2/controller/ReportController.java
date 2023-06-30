@@ -1,7 +1,6 @@
 package ru.skypro.workingwithfiles2.controller;
 
 
-import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
