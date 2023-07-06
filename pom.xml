@@ -10,12 +10,12 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>ru.skypro.workingwithfiles2</groupId>
-    <artifactId>WorkingWithFiles2</artifactId>
+    <groupId>ru.skypro.workingwithfiles</groupId>
+    <artifactId>WorkingWithFiles</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>WorkingWithFiles</name>
-    <description>WorkingWithFiles2</description>
+    <description>WorkingWithFiles</description>
 
     <properties>
         <java.version>17</java.version>
@@ -51,10 +51,22 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.0.10</version>
         </dependency>
     </dependencies>
 
