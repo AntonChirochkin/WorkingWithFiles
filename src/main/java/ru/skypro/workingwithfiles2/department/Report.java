@@ -3,7 +3,6 @@ package ru.skypro.workingwithfiles2.department;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SourceType;
-
 import java.time.Instant;
 
 @Entity

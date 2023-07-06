@@ -1,12 +1,9 @@
 package ru.skypro.workingwithfiles2.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.Nullable;
-import jakarta.annotation.PostConstruct;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
@@ -20,7 +17,6 @@ import ru.skypro.workingwithfiles2.exeption.EmployeeNotFoundExeption;
 import ru.skypro.workingwithfiles2.exeption.EmployeeNotValidExeption;
 import ru.skypro.workingwithfiles2.repository.EmployeeRepository;
 import ru.skypro.workingwithfiles2.repository.ReportRepository;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

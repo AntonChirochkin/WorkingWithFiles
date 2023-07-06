@@ -8,7 +8,11 @@ public class ReportDto {
     private int minSalary;
     private double averageSalary;
 
-    public ReportDto(String position, long count, int maxSalary, int minSalary, double averageSalary) {
+    public ReportDto(String position,
+                     long count,
+                     int maxSalary,
+                     int minSalary,
+                     double averageSalary) {
         this.position = position;
         this.count = count;
         this.maxSalary = maxSalary;
